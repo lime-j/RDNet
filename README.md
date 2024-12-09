@@ -2,8 +2,11 @@
 
 <div align="center">
 
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/reversible-decoupling-network-for-single/reflection-removal-on-real20)](https://paperswithcode.com/sota/reflection-removal-on-real20?p=reversible-decoupling-network-for-single)
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/reversible-decoupling-network-for-single/reflection-removal-on-sir-2-objects)](https://paperswithcode.com/sota/reflection-removal-on-sir-2-objects?p=reversible-decoupling-network-for-single)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/reversible-decoupling-network-for-single/reflection-removal-on-sir-2-wild)](https://paperswithcode.com/sota/reflection-removal-on-sir-2-wild?p=reversible-decoupling-network-for-single)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/reversible-decoupling-network-for-single/reflection-removal-on-sir-2-postcard)](https://paperswithcode.com/sota/reflection-removal-on-sir-2-postcard?p=reversible-decoupling-network-for-single)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/reversible-decoupling-network-for-single/reflection-removal-on-nature)](https://paperswithcode.com/sota/reflection-removal-on-nature?p=reversible-decoupling-network-for-single)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/reversible-decoupling-network-for-single/reflection-removal-on-real20)](https://paperswithcode.com/sota/reflection-removal-on-real20?p=reversible-decoupling-network-for-single)
 
 </div>
 <p align="center" style="font-size: larger;">
@@ -16,8 +19,7 @@ We present a Reversible Decoupling Network (RDNet), which employs a reversible e
 
 ```
 pip install torch>=2.0 torchvision
-pip install einops ema-pytorch fsspec fvcore huggingface-hub matplotlib numpy opencv-python omegaconf pytorch-msssim scikit-image scikit-learn scipy tensorboard tensorboardx wandb
-
+pip install einops ema-pytorch fsspec fvcore huggingface-hub matplotlib numpy opencv-python omegaconf pytorch-msssim scikit-image scikit-learn scipy tensorboard tensorboardx wandb timm
 ```
 
 # Testing 
