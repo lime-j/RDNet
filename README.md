@@ -20,6 +20,7 @@
 We present a Reversible Decoupling Network (RDNet), which employs a reversible encoder to secure valuable information while flexibly decoupling transmission-and-reflection-relevant features during the forward pass. Furthermore, we customize a transmission-rate-aware prompt generator to dynamically calibrate features, further boosting performance. Extensive experiments demonstrate the superiority of RDNet over existing SOTA methods on five widely-adopted benchmark datasets.
 
 # Requirements
+We recommend torch 2.x for our code, but it should works fine with most of the modern versions.
 
 ```
 pip install torch>=2.0 torchvision
@@ -27,7 +28,13 @@ pip install einops ema-pytorch fsspec fvcore huggingface-hub matplotlib numpy op
 ```
 
 # Testing 
+The checkpoint is available at https://checkpoints.mingjia.li/rdnet.pth
 
 ```python
 python3 test_sirs.py --icnn_path <path to the checkpoint> --resume
 ```
+# Training 
+
+Training script will be released in a few days. 
+
+
