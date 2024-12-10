@@ -205,7 +205,7 @@ class ClsModel(YTMTNetBase):
         num_subnet = opt.num_subnet
         self.net_c = PretrainedConvNext("convnext_small_in22k").cuda()
         
-        self.net_c.load_state_dict(torch.load('cls_model.pth')['icnn'])
+        self.net_c.load_state_dict(torch.load('pretrained/cls_model.pth')['icnn'])
 
         self.net_i = FullNet_NLP(channels, layers, num_subnet, opt.loss_col,num_classes=1000, drop_path=0,save_memory=True, inter_supv=True, head_init_scale=None, kernel_size=3).to(self.device)
     
