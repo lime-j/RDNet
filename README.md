@@ -28,10 +28,10 @@ pip install einops ema-pytorch fsspec fvcore huggingface-hub matplotlib numpy op
 ```
 
 # Testing 
-The checkpoint is available at https://checkpoints.mingjia.li/rdnet.pth
+The checkpoint for the main network is available at https://checkpoints.mingjia.li/rdnet.pth ; while the model for cls_model is at https://checkpoints.mingjia.li/cls_model.pth . Please put the cls_model.pth under "pretrained" folder.
 
 ```python
-python3 test_sirs.py --icnn_path <path to the checkpoint> --resume
+python3 test_sirs.py --icnn_path <path to the main checkpoint> --resume
 ```
 # Training 
 
