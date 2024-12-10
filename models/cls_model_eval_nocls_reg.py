@@ -20,7 +20,6 @@ from os.path import join
 from models.arch.RDnet_ import FullNet_NLP
 import timm
 
-load_dict_large='/home/xteam/zhaohao/pycharmproject/YTMT/data/naf_revcol_tiny.pth'
 def tensor2im(image_tensor, imtype=np.uint8):
     image_tensor = image_tensor.detach()
     image_numpy = image_tensor[0].cpu().float().numpy()
@@ -206,9 +205,9 @@ class ClsModel(YTMTNetBase):
         num_subnet = opt.num_subnet
         self.net_c = PretrainedConvNext("convnext_small_in22k").cuda()
         
-        self.net_c.load_state_dict(torch.load('/home/xteam/zhaohao/pycharmproject/YTMT/cls_newdis_058_00014384.pt')['icnn'])
+        # self.net_c.load_state_dict(torch.load('')['icnn'])
 
-        self.net_i = FullNet_NLP(channels, layers, num_subnet, opt.loss_col,num_classes=1000, drop_path=0,save_memory=True, inter_supv=True, head_init_scale=None,kernel_size=3).to(self.device)
+        self.net_i = FullNet_NLP(channels, layers, num_subnet, opt.loss_col,num_classes=1000, drop_path=0,save_memory=True, inter_supv=True, head_init_scale=None, kernel_size=3).to(self.device)
     
         self.edge_map = EdgeMap(scale=1).to(self.device)
     
