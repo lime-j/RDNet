@@ -17,6 +17,8 @@
 <img src="https://github.com/lime-j/RDNet/blob/main/figures/net.png?raw=true" width=95%>
 <p>
 
+**Our work is accepted by CVPR 2025! See you at the conference!**
+
 We present a Reversible Decoupling Network (RDNet), which employs a reversible encoder to secure valuable information while flexibly decoupling transmission-and-reflection-relevant features during the forward pass. Furthermore, we customize a transmission-rate-aware prompt generator to dynamically calibrate features, further boosting performance. Extensive experiments demonstrate the superiority of RDNet over existing SOTA methods on five widely-adopted benchmark datasets.
 
 # Requirements
