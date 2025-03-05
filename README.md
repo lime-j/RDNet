@@ -20,7 +20,7 @@
   <a href="https://github.com/WHiTEWoLFJ"> Hao Zhao</a> ⚔️,
   <a href="https://github.com/lime-j"> Mingjia Li</a> ⚔️,
   <a href="https://github.com/mingcv"> Qiming Hu</a>,
-  <a href="https://sites.google.com/view/xjguo"> Xiaojie Guo🦅</a>,
+  <a href="https://sites.google.com/view/xjguo"> Xiaojie Guo</a> 🦅,
   <p align="center">(⚔️: equal contribution, 🦅 : corresponding author)</p>
 </p>
 
