@@ -1,4 +1,8 @@
-# RDNet for Single Image Reflection Removal
+<p align="center">
+<img src="https://github.com/lime-j/RDNet/blob/main/figures/Title.png?raw=true" width=95%>
+<p>
+
+# Reversible Decoupling Network for Single Image Reflection Removal
 
 <div align="center">
 
@@ -12,16 +16,71 @@
 <p align="center" style="font-size: larger;">
   <a href="https://arxiv.org/abs/2410.08063"> Reversible Decoupling Network for Single Image Reflection Removal</a>
 </p>
+<p align="center">
+  <a href="https://github.com/WHiTEWoLFJ"> Hao Zhao</a> ⚔️,
+  <a href="https://github.com/lime-j"> Mingjia Li</a> ⚔️,
+  <a href="https://github.com/mingcv"> Qiming Hu</a>,
+  <a href="https://sites.google.com/view/xjguo"> Xiaojie Guo🦅</a>,
+  <p align="center">(⚔️: equal contribution, 🦅 : corresponding author)</p>
+</p>
 
 <p align="center">
 <img src="https://github.com/lime-j/RDNet/blob/main/figures/net.png?raw=true" width=95%>
 <p>
-
 **Our work is accepted by CVPR 2025! See you at the conference!**
+<details>
+  <summary>Click for the Abstract of RDNet</summary>
+  We present a Reversible Decoupling Network (RDNet), which employs a reversible encoder to secure valuable information while flexibly decoupling transmission-and-reflection-relevant features during the forward pass. Furthermore, we customize a transmission-rate-aware prompt generator to dynamically calibrate features, further boosting performance. Extensive experiments demonstrate the superiority of RDNet over existing SOTA methods on five widely-adopted benchmark datasets.
+</details>
 
-We present a Reversible Decoupling Network (RDNet), which employs a reversible encoder to secure valuable information while flexibly decoupling transmission-and-reflection-relevant features during the forward pass. Furthermore, we customize a transmission-rate-aware prompt generator to dynamically calibrate features, further boosting performance. Extensive experiments demonstrate the superiority of RDNet over existing SOTA methods on five widely-adopted benchmark datasets.
+## 🚀Todo
 
-# Requirements
+- [ ] Release the Training code of RDNet.
+
+## 🌠 Gallery
+
+Move your mouse over the images to see the results😊. More results can be found in the supplementary material.
+
+<table class="center">
+    <tr>
+      <td><p style="text-align: center">Class Room</p></td>
+      <td><p style="text-align: center">White Wall Chamber</p></td>
+    </tr>
+    <tr>
+      <td>
+        <div style="width: 100%; max-width: 600px; position: relative;">
+          <img src="https://github.com/lime-j/RDNet/blob/main/figures/Input_class.png?raw=true" style="width: 100%; height: 300px; display: block;">
+          <img src="https://github.com/lime-j/RDNet/blob/main/figures/Ours_class.png?raw=true" style="width: 100%; height: 300px; display: block; position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 0.5s;" onmouseover="this.style.opacity=1;" onmouseout="this.style.opacity=0;">
+        </div>
+      </td>
+      <td>
+        <div style="width: 100%; max-width: 600px; position: relative;">
+          <img src="https://github.com/lime-j/RDNet/blob/main/figures/input_white.jpg?raw=true" style="width: 100%; height: 300px; display: block;">
+          <img src="https://github.com/lime-j/RDNet/blob/main/figures/Ours_white.png?raw=true" style="width: 100%; height: 300px; display: block; position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 0.5s;" onmouseover="this.style.opacity=1;" onmouseout="this.style.opacity=0;">
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td><p style="text-align: center">Car Window</p></td>
+      <td><p style="text-align: center">Very Green Office</p></td>
+    </tr>
+    <tr>
+      <td>
+        <div style="width: 100%; max-width: 600px; position: relative;">
+          <img src="https://github.com/lime-j/RDNet/blob/main/figures/Input_car.jpg?raw=true" style="width: 100%; height: 300px; display: block;">
+          <img src="https://github.com/lime-j/RDNet/blob/main/figures/Ours_car.png?raw=true" style="width: 100%; height: 300px; display: block; position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 0.5s;" onmouseover="this.style.opacity=1;" onmouseout="this.style.opacity=0;">
+        </div>
+      </td>
+      <td>
+        <div style="width: 100%; max-width: 600px; position: relative;">
+          <img src="https://github.com/lime-j/RDNet/blob/main/figures/Input_green.png?raw=true" style="width: 100%; height: 300px; display: block;">
+          <img src="https://github.com/lime-j/RDNet/blob/main/figures/Ours_green.png?raw=true" style="width: 100%; height: 300px; display: block; position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 0.5s;" onmouseover="this.style.opacity=1;" onmouseout="this.style.opacity=0;">
+        </div>
+      </td>
+    </tr>
+</table>
+
+## Requirements
 We recommend torch 2.x for our code, but it should works fine with most of the modern versions.
 
 ```
@@ -38,5 +97,4 @@ python3 test_sirs.py --icnn_path <path to the main checkpoint> --resume
 # Training 
 
 Training script will be released in a few days. 
-
 
