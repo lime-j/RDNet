@@ -39,7 +39,6 @@
 
 ## 🌠 Gallery
 
-Move your mouse over the images to see the results😊. More results can be found in the supplementary material.
 
 <table class="center">
     <tr>
