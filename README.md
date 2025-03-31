@@ -101,3 +101,6 @@ The training script / data preprocessing script is released. Just use ``train.py
 python3 train.py 
 ```
 
+# Acknowledgement
+
+We are grateful for the computational resource support provided by Google's TPU Research Cloud and DataCanvas Limited.
