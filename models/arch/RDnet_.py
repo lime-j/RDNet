@@ -164,7 +164,7 @@ class FullNet_NLP(nn.Module):
         self.baseball_adapter.append(nn.Conv2d(192 * 2, 64 * 2, kernel_size=1))
         self.baseball_adapter.append(nn.Conv2d(192 * 4, 64 * 4, kernel_size=1))
         self.baseball_adapter.append(nn.Conv2d(192 * 8, 64 * 8, kernel_size=1))
-    
+        self.baseball.load_state_dict(torch.load('./pretrain/focal.pth'))
     def forward(self, x_in,alpha,prompt=True):
         x_cls_out = []
         x_img_out = []
