@@ -106,10 +106,24 @@ class ReflectionSynthesis(object):
         a2 = truncnorm((0.85 - 1.106) / 0.115, (1.35 - 1.106) / 0.115, loc=1.106, scale=0.115)
         a3 = truncnorm((0.85 - 1.078) / 0.116, (1.31 - 1.078) / 0.116, loc=1.078, scale=0.116)
         b = np.random.uniform(self.beta_range[0], self.beta_range[1])
-        T_[..., 0] *= a1.rvs() 
-        T_[..., 1] *= a2.rvs() 
-        T_[..., 2] *= a3.rvs()  
-        T, R = T_, b * R_
+        
+        T2 = T_
+        T2[..., 0] *= a1.rvs() 
+        T2[..., 1] *= a2.rvs()
+        T2[..., 2] *= a3.rvs() 
+        T, R = T2, b * R_
+        
+        if random.random() < 0.7:
+            I = T + R - T * R
+
+        else:
+            I = T + R
+            if np.max(I) > 1:
+                m = I[I > 1]
+                m = (np.mean(m) - 1) * 1.3
+                I = np.clip(T + np.clip(R - m, 0, 1), 0, 1)
+
+        return T_, R_, I
         if random.random() < 0.7:
             I = T + R - T * R
             
