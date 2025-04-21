@@ -89,14 +89,14 @@ pip install einops ema-pytorch fsspec fvcore huggingface-hub matplotlib numpy op
 ```
 
 # Testing 
-The checkpoint for the main network is available at https://checkpoints.mingjia.li/rdnet.pth ; while the model for cls_model is at https://checkpoints.mingjia.li/cls_model.pth . Please put the cls_model.pth under "pretrained" folder.
+The checkpoint for the main network is available at https://checkpoints.mingjia.li/rdnet.pth ; while the model for cls_model is at https://checkpoints.mingjia.li/cls_model.pth . Please put the cls_model.pth under "pretrained" folder. 
 
 ```python
 python3 test_sirs.py --icnn_path <path to the main checkpoint> --resume
 ```
 # Training 
 
-The training script / data preprocessing script is released. Just use ``train.py`` to train the model.
+The training script / data preprocessing script is released. Just use ``train.py`` to train the model. The pretrained focalnet backbone is in https://checkpoints.mingjia.li/focal.pth
 
 ```python
 python3 train.py 
