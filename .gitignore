@@ -1,1 +1,14 @@
+inference_results/
 .DS_Store
+experiment/
+data/
+checkpoints/
+pretrained/
+*.pyc
+*.pyo
+*.pyd
+*.pyw
+*.pyz
+*.pywz
+pretrain/
+data/

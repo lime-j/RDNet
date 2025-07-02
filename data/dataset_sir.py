@@ -287,9 +287,26 @@ class RealDataset(BaseDataset):
         if size is not None:
             self.fns = self.fns[:size]
 
-    def align(self, x):
+    def align(self, x, max_size=1024):
         h, w = x.height, x.width
+        
+        # Resize to maximum 1024 pixels while keeping aspect ratio
+        if max(h, w) > max_size:
+            if h > w:
+                new_h = max_size
+                new_w = int(w * (max_size / h))
+            else:
+                new_w = max_size
+                new_h = int(h * (max_size / w))
+            h, w = new_h, new_w
+        
+        # Ensure dimensions are divisible by 32 (required by model)
         h, w = h // 32 * 32, w // 32 * 32
+        
+        # Ensure minimum size (at least 32x32)
+        h = max(h, 32)
+        w = max(w, 32)
+        
         x = x.resize((w, h))
         return x
 
