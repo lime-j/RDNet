@@ -152,16 +152,19 @@ class YTMTNetBase(BaseModel):
             if not os.path.exists(join(savedir, name)):
                 os.makedirs(join(savedir, name))
 
-            if os.path.exists(join(savedir, name, '{}.png'.format(self.opt.name))):
+            if os.path.exists(join(savedir, name, '{}_l.png'.format(self.opt.name))):
                 return
 
         with torch.no_grad():
             output_i, output_j = self.forward()
-            output_i = tensor2im(output_i)
-            output_j = tensor2im(output_j)
+            # output_j is a list, get the final clean and reflection outputs
+            # The final outputs are at indices 6 and 7 (similar to eval method)
+            final_clean = tensor2im(output_j[6])  # Final clean transmission layer
+            final_reflection = tensor2im(output_j[7])  # Final reflection layer
+            
             if self.data_name is not None and savedir is not None:
-                Image.fromarray(output_i.astype(np.uint8)).save(join(savedir, name, '{}_l.png'.format(self.opt.name)))
-                Image.fromarray(output_j.astype(np.uint8)).save(join(savedir, name, '{}_r.png'.format(self.opt.name)))
+                Image.fromarray(final_clean.astype(np.uint8)).save(join(savedir, name, '{}_l.png'.format(self.opt.name)))
+                Image.fromarray(final_reflection.astype(np.uint8)).save(join(savedir, name, '{}_r.png'.format(self.opt.name)))
                 Image.fromarray(tensor2im(self.input).astype(np.uint8)).save(join(savedir, name, 'm_input.png'))
 
 
