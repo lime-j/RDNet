@@ -37,7 +37,6 @@
 
 **Our work RDNet wins the NTIRE 2025 Single Image Reflection Removal in the Wild Challenge!**
 
-**I'm seeking an internship opportunity! Don't hesitate to get in touch with me if you need!**
 ## 🌠 Gallery
 
 
