@@ -4,13 +4,9 @@
 
 # Reversible Decoupling Network for Single Image Reflection Removal
 
+
 <div align="center">
 
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/reversible-decoupling-network-for-single/reflection-removal-on-sir-2-objects)](https://paperswithcode.com/sota/reflection-removal-on-sir-2-objects?p=reversible-decoupling-network-for-single)
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/reversible-decoupling-network-for-single/reflection-removal-on-sir-2-wild)](https://paperswithcode.com/sota/reflection-removal-on-sir-2-wild?p=reversible-decoupling-network-for-single)
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/reversible-decoupling-network-for-single/reflection-removal-on-sir-2-postcard)](https://paperswithcode.com/sota/reflection-removal-on-sir-2-postcard?p=reversible-decoupling-network-for-single)
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/reversible-decoupling-network-for-single/reflection-removal-on-nature)](https://paperswithcode.com/sota/reflection-removal-on-nature?p=reversible-decoupling-network-for-single)
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/reversible-decoupling-network-for-single/reflection-removal-on-real20)](https://paperswithcode.com/sota/reflection-removal-on-real20?p=reversible-decoupling-network-for-single)
 
 </div>
 <p align="center" style="font-size: larger;">
@@ -36,6 +32,8 @@
 **Our work is accepted by CVPR 2025! See you at the conference!**
 
 **Our work RDNet wins the NTIRE 2025 Single Image Reflection Removal in the Wild Challenge!**
+
+**This codebase is deprecated. Please use XReflection(https://github.com/hainuo-wang/XReflection) instead! It supports multi-GPU training and has better reproducibility.**
 
 ## 🌠 Gallery
 
@@ -104,3 +102,4 @@ python3 train.py
 # Acknowledgement
 
 We are grateful for the computational resource support provided by Google's TPU Research Cloud and DataCanvas Limited.
+
